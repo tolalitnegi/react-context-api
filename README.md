@@ -54,3 +54,17 @@ const CurrentUserContext = createContext(undefined);
 
 ```
 
+### pros 
+- light weight
+- not many elements as redux
+
+### cons
+- loose saga thunk middlewares
+- components are not reusable as they are bound to a particular context user or cart etc
+- more providers 
+
+## best use case
+- large app use redux too much state , flexibility , async events, reuse components
+- small , portfolio project use context , small to medium size.
+
+
