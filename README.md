@@ -2,6 +2,14 @@
 
 ## Replacing redux with contextApi
 
+## setup 
+
+- disconnect any vpn
+- nvm use 14
+- yarn install OR just yarn
+- yarn start
+
+
 ### Problem Statement : Props drilling
 HOC -> Comp1 -> comp2 -> last comp 
 Other comps are not using the props but still passing it along
@@ -31,6 +39,7 @@ collection.component.jsx
 
 - context consumer always looks for provider in the tree hierarchy
 - context api uses local state of component to pass it to context api which then can be used in other components.
+- not only values but functions can also be passed from local state to context consumers
 ```
 Provider -> consumer
 import {createContext} from 'react';
