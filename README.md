@@ -28,3 +28,20 @@ const { title, items } = collection;
 ```
 #### See
 collection.component.jsx
+
+- context consumer always looks for provider in the tree hierarchy
+- context api uses local state of component to pass it to context api which then can be used in other components.
+```
+Provider -> consumer
+import {createContext} from 'react';
+const CurrentUserContext = createContext(undefined);
+<CurrentUserContext.Provider value={this.state.currentUser}>
+  <Component1>
+   {use this.setState() to set the context value now}
+    <CurrentUserContext.Consumer>
+      <Component2>
+// if provider is missing Context consumer can access only the initial value not dynamic values
+      const currentUser = useContext(CurrentUserContext);
+
+```
+
